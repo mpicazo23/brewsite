@@ -3,5 +3,16 @@
 {% block main %}
 <p>Welcome to our brewsite page</p>
 <p> {{ user }}</p>
+<div class = "container">
+<table>
+    <tbody>
+        <tr>
+            <td><img src = "{{ url_for('static', filename = 'images/ColdBrew.png') }}" class = "rounded" height = "200" alt = "Cold glass of beer"></td>
+            <td><img src = "{{ url_for('static', filename = 'images/BrewTaps.jpg') }}" class = "rounded" height = "200" alt = "Beer taps in a brewery"></td>
+            <td><img src = "{{ url_for('static', filename = 'images/BrewCheers.jpg') }}" class = "rounded" height = "200" alt = "Two beer glasses tapping"></td>
+        </tr>
+    </tbody>
+</table>
+</div>
 
 {% endblock main %}
