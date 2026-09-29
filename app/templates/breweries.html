@@ -6,11 +6,15 @@
     .td_bgcolor td {
         background-color: #99bdef;
     }
+    .th_bgcolor th {
+        background-color: #053e8e;
+        color: white;
+    }
 </style>
 <div class="container">
-<table class="table table-bordered align-top">
-    <thead>
-        <tr>
+<table class="table table-bordered align-top" >
+    <thead">
+        <tr class = "th_bgcolor">
             <th>Name</th>
             <th>Type</th>
             <th>Country</th>
@@ -21,7 +25,7 @@
     </thead>
     <tbody>
         {% for b in content %}
-        <tr {% if loop.index0 //4 %2 == 1 %} class = "td_bgcolor" {% endif %}>
+        <tr {% if loop.index0 //1 %2 == 1 %} class = "td_bgcolor" {% endif %}>
             <td>{{ b.get("name") }}</td>
             <td>{{ b.get("brewery_type") }}</td>
             <td>{{ b.get("country") }}</td>
